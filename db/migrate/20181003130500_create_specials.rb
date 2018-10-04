@@ -3,7 +3,7 @@ class CreateSpecials < ActiveRecord::Migration[5.2]
     create_table :specials do |t|
       t.text :name
       t.integer :length
-      t.integer :image_url
+      t.text :image_url
       t.integer :comedian_id
 
       t.timestamps null: false
