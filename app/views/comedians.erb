@@ -1,0 +1,22 @@
+<h1>Comedians</h1>
+
+<%@comedians.each do |comedian| %>
+  <%= comedian.image %>
+  <div class="comedian-text">
+    <h2> <%= comedian.name %></h2>
+    <p><%= comedian.age %></p>
+    <p><%= comedian.city %></p>
+    <p><%= comedian.special_count %></p>
+  </div>
+  <ul class="specials">
+    <% @specials.each do |special| %>
+    <li>
+      <%= special.thumnail %>
+      <div class="special-text">
+        <h3><%= special.name %></h3>
+        <p><%= special.length %></p>
+      </div>
+    </li>
+    <% end %>
+  </ul>
+<% end %>
