@@ -1,3 +1,4 @@
+OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES shotgun
 ## Laugh Tracks
 
 This is your Week 1 Solo Project for Module 2 of the Backend program at Turing.

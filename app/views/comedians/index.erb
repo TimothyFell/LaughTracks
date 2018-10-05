@@ -1,0 +1,42 @@
+<section class="hero">
+  <h1>All Comedians</h1>
+  <div class="statistics">
+    <p>Average Comedian Age: <%= @comedians.average_age %></p>
+    <p>Average Specials Run Time: <%= @specials.average_length %></p>
+    <p>Comedian Cities:</p>
+    <ul class="cities">
+      <% @comedians.unique_cities.each do |city| %>
+      <li><%= city%></li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+
+<% @comedians.each do |comedian| %>
+  <section id="comedian-<%= comedian.id %>" class="comedian">
+    <div class="comedian-info">
+      <img src=<%= comedian.image_url %> alt=<%= comedian.name %>>
+      <div class="comedian-text">
+        <h2><%= comedian.name %></h2>
+        <p>Age: <%= comedian.age %></p>
+        <p>Hometown: <%= comedian.city %></p>
+        <p>Specials Done: <%= comedian.specials.count %></p>
+      </div>
+    </div>
+    <% if comedian.specials != [] %>
+      <h2 class="specials-title"><%= comedian.name %>'s Comedy Specials</h2>
+      <ul class="specials">
+        <% comedian.specials.each do |special| %>
+        <li>
+          <img src=<%= special.image_url %>>
+          <div class="special-text">
+            <h3><%= special.name %></h3>
+            <p>Length: <%= special.length %> min</p>
+          </div>
+        </li>
+        <% end %>
+      </ul>
+    <% end %>
+    <div class="clear-fix"></div>
+  </section>
+<% end %>

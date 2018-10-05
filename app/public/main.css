@@ -1,0 +1,188 @@
+/* Global Styles */
+body {
+  color:#333;
+  font-family: 'Century Gothic','Open Sans',Arial, sans-serif;
+  font-size:1em;
+  margin: 0;
+  background-color:fff;
+}
+
+body * {
+  display:block;
+  box-sizing: border-box;
+}
+
+.hero h1 {
+  font-weight:bold;
+  width: 40%;
+  font-size:2em;
+  display: block;
+}
+
+h2 {
+  font-weight:bold;
+  size:1.2em;
+  margin: 0 0 5px;
+}
+
+h3 {
+  font-weight:bold;
+  margin: 0 0 5px;
+}
+
+p {
+  margin: 5px 0 0 10px;
+}
+
+img {
+  box-shadow:2px 2px 3px 0 rgba(0,0,0,0.5);
+}
+
+a, .comedian.white a {
+  color:#333;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover, .comedian.white a:hover {
+  color:#111;
+  text-shadow: 0 0 3px rgba(0,0,0,0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #222;
+}
+
+.logo-link {
+  padding: 15px;
+  display: block;
+  max-width: 25%;
+  float: left;
+  margin-left: calc(10% - 15px);
+}
+
+.logo-link h1 {
+  margin:0;
+  line-height: 50px;
+  color: #eee;
+  text-decoration: underline;
+}
+
+.logo-link:hover h1 {
+  color:#fff;
+  text-shadow: 0 0 2px rgba(255,255,255,0.5);
+}
+
+nav {width: 50%;float: right;padding-right: 10%;}
+
+.nav-link {line-height: 80px;float: right;padding: 0 20px;min-width: 110px;text-align: center;text-decoration: none;color: #eee;}
+
+.nav-link:hover {
+  text-shadow: none;
+  background-color: #111;
+  color: white;
+}
+
+/* Hero Styles */
+
+.hero {
+  background-image:url('https://unslaved.com/wp-content/uploads/2016/11/mic-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  min-height: 56%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: left;
+  vertical-align: middle;
+  clear: both;
+}
+
+.hero h1 {
+  border-bottom: 3px solid #fff;
+  width: 40%;
+  margin: auto 10% 40px;
+  color: white;
+}
+
+/* Comedian Styles */
+
+.comedian:nth-child(2n) {
+  background-color: #222;
+  color:#fff;
+}
+
+.comedian:nth-child(2n) a {
+  color:#ccc;
+}
+
+.comedian:nth-child(2n) a:hover {
+  color:#fff;
+  text-shadow: 0 0 3px rgba(255,255,255,0.25);
+}
+
+.comedian, .comedian.white {
+  width: 100%;
+  padding: 40px 10%;
+  background-color:#fff;
+}
+
+.comedian-info img {
+  max-width: 40%;
+  float:left;
+}
+
+.comedian-text {
+  width: calc(60% - 15px);
+  float:left;
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 1px solid #aaa;
+}
+
+.comedian-text p {
+  font-size:1.2em
+}
+
+/* Special Styles */
+
+.specials-title {
+  clear:both;
+  padding:20px 0;
+}
+
+.specials {
+  display:flex;
+  justify-content:center;
+  clear: both;
+  margin: 0;
+  padding: 0 0 40px;
+}
+
+.specials li {
+  list-style:none;
+  width: 33%;
+}
+
+.specials img {
+  width: 35%;
+  float: left;
+  margin-right: 5%;
+}
+
+.special-text {
+  width: 55%;
+  float: left;
+  margin-right: 5%;
+}
+
+/* Footer Styles */
+
+
+/* Fixes */
+.clear-fix {
+  clear:both;
+  display:block;
+}

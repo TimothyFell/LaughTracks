@@ -5,7 +5,6 @@ class CreateComedians < ActiveRecord::Migration[5.2]
       t.integer :age
       t.text :city
       t.text :image_url
-      t.integer :specials_count
 
       t.timestamps null: false
     end
