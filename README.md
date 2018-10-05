@@ -1,3 +1,4 @@
+OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES shotgun
 ## Laugh Tracks
 
 This is your Week 1 Solo Project for Module 2 of the Backend program at Turing.
@@ -119,9 +120,9 @@ User Story 7
 As a visitor
 When I visit `/comedians?age=34`
 Then I see a list of all comedians with an age of 34
-Just like a previous User Story, BUT all other statistics 
-information in the 'Statistics' area of the page should be limited 
-to reflect only the information about the comedians listed on 
+Just like a previous User Story, BUT all other statistics
+information in the 'Statistics' area of the page should be limited
+to reflect only the information about the comedians listed on
 the page.
 
 - Testing should ensure that calculated statistics are
