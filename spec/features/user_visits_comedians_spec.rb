@@ -7,7 +7,7 @@ RSpec.describe Comedian do
       expect(page).to have_content('Welcome!')
     end
 
-    it 'They should see links to /comedians' do
+    it 'They should see a link to /comedians' do
       visit '/'
 
       have_link 'All Comedians!', href: '/comedians'
@@ -101,13 +101,46 @@ RSpec.describe Comedian do
       describe 'When a user queries by age ex: /comedians?age=34 ' do
         describe 'They should see the comedian index with' do
 
-          it 'Should see comedians of the age queried' do
-            visit '/comedians?age=34'
+          describe 'Comedians of the age queried' do
 
-            expect(page).to have_content(@comedian_8.name)
+            it 'have a name, age and city displayed' do
+              visit '/comedians?age=34'
+
+              within("#comedian-#{@comedian_8.id}") do
+                expect(page).to have_content(@comedian_8.name)
+                expect(page).to have_content(@comedian_8.age)
+                expect(page).to have_content(@comedian_8.city)
+              end
+            end
+
+            it "have a list of their specials' names" do
+              visit '/comedians?age=34'
+
+              within("#comedian-#{@comedian_8.id}") do
+                within('.specials') do
+                  expect(page).to have_content(@special_8a.name)
+                  expect(page).to have_content(@special_8b.name)
+                  expect(page).to have_content(@special_8c.name)
+                end
+              end
+            end
+
+            it "have their specials' lengths and thumbnails displayed" do
+              visit '/comedians?age=34'
+
+              within("#comedian-#{@comedian_8.id}") do
+                expect(page).to have_content("Length: #{@special_8a.length} min")
+                expect(page).to have_content("Length: #{@special_8b.length} min")
+                expect(page).to have_content("Length: #{@special_8c.length} min")
+
+                expect(page).to have_css("img[src='#{@special_8a.image_url}']")
+                expect(page).to have_css("img[src='#{@special_8b.image_url}']")
+                expect(page).to have_css("img[src='#{@special_8c.image_url}']")
+              end
+            end
           end
 
-          it "Should not see any of the comedians who aren't that age" do
+          it "None of the comedians who aren't that age" do
             visit '/comedians?age=34'
 
             expect(page).to have_no_content(@comedian_1.name)
@@ -122,7 +155,7 @@ RSpec.describe Comedian do
   describe 'When a user visits /comedians/new ' do
     describe 'They should see a form to add a new comedian' do
 
-      it 'Should have relevant fields' do
+      it 'Should have relevant fields and redirect on submission' do
         visit '/comedians/new'
         fill_in 'comedian[name]', with: 'John Doe'
         fill_in 'comedian[age]', with: '38'

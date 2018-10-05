@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-05T07:47:59-06:00">2018-10-05T07:47:59-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-10-05T08:01:34-06:00">2018-10-05T08:01:34-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.5
+         1.64
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>9</b> files in total.
-    <b>144</b> relevant lines. 
-    <span class="green"><b>144</b> lines covered</span> and
+    <b>8</b> files in total.
+    <b>164</b> relevant lines. 
+    <span class="green"><b>164</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -57,7 +57,7 @@
         <td>16</td>
         <td>16</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>2.8</td>
       </tr>
       
       <tr>
@@ -67,7 +67,7 @@
         <td>7</td>
         <td>7</td>
         <td>0</td>
-        <td>2.4</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -77,7 +77,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>2.0</td>
+        <td>2.4</td>
       </tr>
       
       <tr>
@@ -101,23 +101,13 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#c1cf6c7037eeb014344bea8463d9c03723d68ae0" class="src_link" title="spec/features/user_searches_for_comedian_age_spec.rb">spec/features/user_searches_for_comedian_age_spec.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0.0</td>
-      </tr>
-      
-      <tr>
         <td class="strong"><a href="#e6d34a9c7b6da54a2e2a0238382d01fc176b1394" class="src_link" title="spec/features/user_visits_comedians_spec.rb">spec/features/user_visits_comedians_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>139</td>
-        <td>66</td>
-        <td>66</td>
+        <td>172</td>
+        <td>86</td>
+        <td>86</td>
         <td>0</td>
-        <td>1.5</td>
+        <td>1.6</td>
       </tr>
       
       <tr>
@@ -218,20 +208,20 @@
           <code class="ruby">  get &#39;/comedians&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="9">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="9">
+          <span class="hits">8</span>
           
           <code class="ruby">    if params[:age] != nil</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="10">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
           <code class="ruby">      @comedians = Comedian.where(age: params[:age])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="11">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="11">
+          <span class="hits">4</span>
           
           <code class="ruby">      @specials = Special.all</code>
         </li>
@@ -266,8 +256,8 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="17">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="17">
+          <span class="hits">8</span>
           
           <code class="ruby">    erb :&quot;/comedians/index&quot;</code>
         </li>
@@ -411,8 +401,8 @@
           <code class="ruby">  def self.average_age</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    average(:age)</code>
         </li>
@@ -435,8 +425,8 @@
           <code class="ruby">  def self.unique_cities</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="12">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="12">
+          <span class="hits">8</span>
           
           <code class="ruby">    select(:city).distinct.map(&amp;:city)</code>
         </li>
@@ -520,8 +510,8 @@
           <code class="ruby">  def self.average_length</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="8">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
           
           <code class="ruby">    average(:length)</code>
         </li>
@@ -833,32 +823,13 @@
 </div>
 
       
-        <div class="source_table" id="c1cf6c7037eeb014344bea8463d9c03723d68ae0">
-  <div class="header">
-    <h3>spec/features/user_searches_for_comedian_age_spec.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>0</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-    </ol>
-  </pre>
-</div>
-
-      
         <div class="source_table" id="e6d34a9c7b6da54a2e2a0238382d01fc176b1394">
   <div class="header">
     <h3>spec/features/user_visits_comedians_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>66</b> relevant lines. 
-      <span class="green"><b>66</b> lines covered</span> and
+      <b>86</b> relevant lines. 
+      <span class="green"><b>86</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -923,7 +894,7 @@
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;They should see links to /comedians&#39; do</code>
+          <code class="ruby">    it &#39;They should see a link to /comedians&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="11">
@@ -1058,8 +1029,8 @@
           <code class="ruby">      before(:each) do</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="33">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="33">
+          <span class="hits">7</span>
           
           <code class="ruby">        @comedian_1 = Comedian.create(</code>
         </li>
@@ -1076,8 +1047,8 @@
           <code class="ruby">          city: &quot;Silver Spring, Maryland&quot;, image_url:&quot;https://www.datocms-assets.com/4857/1522135089-493595692_1280x720.jpg&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="36">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="36">
+          <span class="hits">7</span>
           
           <code class="ruby">        @special_1a = @comedian_1.specials.create(</code>
         </li>
@@ -1100,8 +1071,8 @@
           <code class="ruby">        )</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="40">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="40">
+          <span class="hits">7</span>
           
           <code class="ruby">        @special_1b = @comedian_1.specials.create(</code>
         </li>
@@ -1124,8 +1095,8 @@
           <code class="ruby">        )</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="44">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="44">
+          <span class="hits">7</span>
           
           <code class="ruby">        @special_1c = @comedian_1.specials.create(</code>
         </li>
@@ -1148,8 +1119,8 @@
           <code class="ruby">        )</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="48">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="48">
+          <span class="hits">7</span>
           
           <code class="ruby">        @comedian_8 = Comedian.create(</code>
         </li>
@@ -1166,8 +1137,8 @@
           <code class="ruby">          city: &quot;New York, New York&quot;, image_url:&quot;https://uproxx.files.wordpress.com/2018/07/iliza-shlesinger-elder-millennial-comedy-column.jpg?quality=95&amp;w=650&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="51">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="51">
+          <span class="hits">7</span>
           
           <code class="ruby">        @special_8a = @comedian_8.specials.create(</code>
         </li>
@@ -1190,8 +1161,8 @@
           <code class="ruby">        )</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="55">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="55">
+          <span class="hits">7</span>
           
           <code class="ruby">        @special_8b = @comedian_8.specials.create(</code>
         </li>
@@ -1214,8 +1185,8 @@
           <code class="ruby">        )</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="59">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="7" data-linenumber="59">
+          <span class="hits">7</span>
           
           <code class="ruby">        @special_8c = @comedian_8.specials.create(</code>
         </li>
@@ -1487,67 +1458,67 @@
         <li class="covered" data-hits="1" data-linenumber="104">
           <span class="hits">1</span>
           
-          <code class="ruby">          it &#39;Should see comedians of the age queried&#39; do</code>
+          <code class="ruby">          describe &#39;Comedians of the age queried&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="105">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            visit &#39;/comedians?age=34&#39;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="106">
+        <li class="never" data-hits="" data-linenumber="105">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="106">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            it &#39;have a name, age and city displayed&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">            expect(page).to have_content(@comedian_8.name)</code>
+          <code class="ruby">              visit &#39;/comedians?age=34&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="108">
           
           
-          <code class="ruby">          end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="109">
+        <li class="covered" data-hits="1" data-linenumber="109">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">              within(&quot;#comedian-#{@comedian_8.id}&quot;) do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="110">
           <span class="hits">1</span>
           
-          <code class="ruby">          it &quot;Should not see any of the comedians who aren&#39;t that age&quot; do</code>
+          <code class="ruby">                expect(page).to have_content(@comedian_8.name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="111">
           <span class="hits">1</span>
           
-          <code class="ruby">            visit &#39;/comedians?age=34&#39;</code>
+          <code class="ruby">                expect(page).to have_content(@comedian_8.age)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="112">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="113">
+        <li class="covered" data-hits="1" data-linenumber="112">
           <span class="hits">1</span>
           
-          <code class="ruby">            expect(page).to have_no_content(@comedian_1.name)</code>
+          <code class="ruby">                expect(page).to have_content(@comedian_8.city)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby">              end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
           
           
-          <code class="ruby">          end</code>
+          <code class="ruby">            end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="115">
@@ -1556,16 +1527,16 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="116">
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        end</code>
+          <code class="ruby">            it &quot;have a list of their specials&#39; names&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="117">
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">              visit &#39;/comedians?age=34&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="118">
@@ -1574,100 +1545,100 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="119">
+        <li class="covered" data-hits="1" data-linenumber="119">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">              within(&quot;#comedian-#{@comedian_8.id}&quot;) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="120">
+        <li class="covered" data-hits="1" data-linenumber="120">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">                within(&#39;.specials&#39;) do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="121">
+        <li class="covered" data-hits="1" data-linenumber="121">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">                  expect(page).to have_content(@special_8a.name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="122">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;When a user visits /comedians/new &#39; do</code>
+          <code class="ruby">                  expect(page).to have_content(@special_8b.name)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="123">
           <span class="hits">1</span>
           
-          <code class="ruby">    describe &#39;They should see a form to add a new comedian&#39; do</code>
+          <code class="ruby">                  expect(page).to have_content(@special_8c.name)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="124">
           
           
+          <code class="ruby">                end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="125">
+          
+          
+          <code class="ruby">              end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="126">
+          
+          
+          <code class="ruby">            end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="127">
+          
+          
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="125">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      it &#39;Should have relevant fields&#39; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="126">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        visit &#39;/comedians/new&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="127">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        fill_in &#39;comedian[name]&#39;, with: &#39;John Doe&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="128">
           <span class="hits">1</span>
           
-          <code class="ruby">        fill_in &#39;comedian[age]&#39;, with: &#39;38&#39;</code>
+          <code class="ruby">            it &quot;have their specials&#39; lengths and thumbnails displayed&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="129">
           <span class="hits">1</span>
           
-          <code class="ruby">        fill_in &#39;comedian[city]&#39;, with: &#39;Boston, MA&#39;</code>
+          <code class="ruby">              visit &#39;/comedians?age=34&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="130">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        fill_in &#39;comedian[image_url]&#39;, with: &#39;https://modelingpocahontas.files.wordpress.com/2013/11/c1ed5-johnsmith.jpg&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="131">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        click_button(&#39;Submit&#39;)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="132">
+        <li class="never" data-hits="" data-linenumber="130">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="covered" data-hits="1" data-linenumber="131">
+          <span class="hits">1</span>
+          
+          <code class="ruby">              within(&quot;#comedian-#{@comedian_8.id}&quot;) do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="132">
+          <span class="hits">1</span>
+          
+          <code class="ruby">                expect(page).to have_content(&quot;Length: #{@special_8a.length} min&quot;)</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="133">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(page).to have_current_path(&#39;/comedians&#39;)</code>
+          <code class="ruby">                expect(page).to have_content(&quot;Length: #{@special_8b.length} min&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="134">
+        <li class="covered" data-hits="1" data-linenumber="134">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">                expect(page).to have_content(&quot;Length: #{@special_8c.length} min&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="135">
@@ -1676,25 +1647,223 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="136">
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">                expect(page).to have_css(&quot;img[src=&#39;#{@special_8a.image_url}&#39;]&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="137">
+        <li class="covered" data-hits="1" data-linenumber="137">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">                expect(page).to have_css(&quot;img[src=&#39;#{@special_8b.image_url}&#39;]&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="138">
+        <li class="covered" data-hits="1" data-linenumber="138">
+          <span class="hits">1</span>
+          
+          <code class="ruby">                expect(page).to have_css(&quot;img[src=&#39;#{@special_8c.image_url}&#39;]&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="139">
+          
+          
+          <code class="ruby">              end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="140">
+          
+          
+          <code class="ruby">            end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="141">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="142">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="139">
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          it &quot;None of the comedians who aren&#39;t that age&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="144">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            visit &#39;/comedians?age=34&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="145">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            expect(page).to have_no_content(@comedian_1.name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="147">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="148">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="149">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="150">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="151">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="153">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  describe &#39;When a user visits /comedians/new &#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    describe &#39;They should see a form to add a new comedian&#39; do</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      it &#39;Should have relevant fields and redirect on submission&#39; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="159">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        visit &#39;/comedians/new&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        fill_in &#39;comedian[name]&#39;, with: &#39;John Doe&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="161">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        fill_in &#39;comedian[age]&#39;, with: &#39;38&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="162">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        fill_in &#39;comedian[city]&#39;, with: &#39;Boston, MA&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="163">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        fill_in &#39;comedian[image_url]&#39;, with: &#39;https://modelingpocahontas.files.wordpress.com/2013/11/c1ed5-johnsmith.jpg&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="164">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        click_button(&#39;Submit&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="165">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="166">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(page).to have_current_path(&#39;/comedians&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="167">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="168">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="169">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="170">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="171">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="172">
           
           
           <code class="ruby">end</code>

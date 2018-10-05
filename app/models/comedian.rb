@@ -12,4 +12,8 @@ class Comedian < ActiveRecord::Base
     select(:city).distinct.map(&:city)
   end
 
+  def self.total_specials
+    sum(:specials)
+  end
+
 end
