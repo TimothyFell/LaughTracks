@@ -2,7 +2,10 @@ ENV["RACK_ENV"] ||= "test"
 
 require 'bundler'
 require 'simplecov'
-SimpleCov.start
+SimpleCov.start do
+  add_filter 'config/'
+  add_filter 'spec/'
+end
 
 Bundler.require(:default, :test)
 require File.expand_path('../../config/environment.rb', __FILE__)

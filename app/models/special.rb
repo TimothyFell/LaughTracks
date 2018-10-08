@@ -8,8 +8,13 @@ class Special < ActiveRecord::Base
     average(:length)
   end
 
-  # def self.with_comedians
-  #   joins(:comedians)
-  # end
+  def self.total_specials(comedians)
+    self.by_comedians(comedians).count
+  end
+
+  def self.by_comedians(comedians)
+    comedian_ids = comedians.pluck(:id)
+    where(comedian_id: comedian_ids)
+  end
 
 end

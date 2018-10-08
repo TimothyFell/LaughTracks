@@ -1,8 +1,10 @@
 <section class="hero">
   <h1>All Comedians</h1>
   <div class="statistics">
-    <p>Average Comedian Age: <%= @comedians.average_age %></p>
-    <p>Average Specials Run Time: <%= @specials.average_length %></p>
+    <h2>Statistics</h2>
+    <p>Average Comedian Age: <%= @comedians.average_age %> years</p>
+    <p>Average Specials Run Time: <%= @specials.average_length %> min</p>
+    <p>Total Specials: <%= @specials.total_specials(@comedians) %> specials</p>
     <p>Comedian Cities:</p>
     <ul class="cities">
       <% @comedians.unique_cities.each do |city| %>
@@ -17,7 +19,7 @@
     <div class="comedian-info">
       <img src=<%= comedian.image_url %> alt=<%= comedian.name %>>
       <div class="comedian-text">
-        <h2><%= comedian.name %></h2>
+        <a href="/comedians/<%= comedian.id %>" title=""><h2><%= comedian.name %></h2></a>
         <p>Age: <%= comedian.age %></p>
         <p>Hometown: <%= comedian.city %></p>
         <p>Specials Done: <%= comedian.specials.count %></p>

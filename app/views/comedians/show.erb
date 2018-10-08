@@ -1,0 +1,26 @@
+<section id="comedian-<%= @comedians.id %>" class="comedian white">
+  <div class="comedian-info">
+    <img src=<%= @comedians.image_url %> alt=<%= @comedians.name %>>
+    <div class="comedian-text">
+      <h2><%= @comedians.name %></h2>
+      <p>Age: <%= @comedians.age %></p>
+      <p>Hometown: <%= @comedians.city %></p>
+      <p>Specials Done: <%= @comedians.specials.count %></p>
+    </div>
+  </div>
+  <% if @comedians.specials != [] %>
+    <h2 class="specials-title"><%= @comedians.name %>'s Comedy Specials</h2>
+    <ul class="specials">
+      <% @comedians.specials.each do |special| %>
+      <li>
+        <img src=<%= special.image_url %>>
+        <div class="special-text">
+          <h3><%= special.name %></h3>
+          <p>Length: <%= special.length %> min</p>
+        </div>
+      </li>
+      <% end %>
+    </ul>
+  <% end %>
+  <div class="clear-fix"></div>
+</section>

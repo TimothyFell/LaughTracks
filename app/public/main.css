@@ -5,6 +5,10 @@ body {
   font-size:1em;
   margin: 0;
   background-color:fff;
+  background-image: stage.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 body * {
@@ -12,9 +16,8 @@ body * {
   box-sizing: border-box;
 }
 
-.hero h1 {
+h1 {
   font-weight:bold;
-  width: 40%;
   font-size:2em;
   display: block;
 }
@@ -103,8 +106,17 @@ nav {width: 50%;float: right;padding-right: 10%;}
 .hero h1 {
   border-bottom: 3px solid #fff;
   width: 40%;
-  margin: auto 10% 40px;
+  margin: auto 5% 40px 10%;
   color: white;
+  float: left;
+}
+
+.statistics{
+  background-color: rgba(0,0,0,0.75);
+  padding: 20px;
+  float: right;
+  color: white;
+  width: 35%;
 }
 
 /* Comedian Styles */
@@ -127,6 +139,7 @@ nav {width: 50%;float: right;padding-right: 10%;}
   width: 100%;
   padding: 40px 10%;
   background-color:#fff;
+  color:#333;
 }
 
 .comedian-info img {
@@ -155,7 +168,7 @@ nav {width: 50%;float: right;padding-right: 10%;}
 
 .specials {
   display:flex;
-  justify-content:center;
+  justify-content: left;
   clear: both;
   margin: 0;
   padding: 0 0 40px;
@@ -178,8 +191,97 @@ nav {width: 50%;float: right;padding-right: 10%;}
   margin-right: 5%;
 }
 
+/* New Comedian Styles */
+
+#new-comedian {
+  padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+}
+
+#new-comedian h2 {text-align: center;margin-bottom: 40px;}
+
+.form-container {
+  width:500px;
+}
+
+input[type="text"] {width: 100%;line-height: 2.5em;padding: 5px 10px;margin: 10px 0;border-radius: 4px;border: 2px solid #fff;transition: all 0.2s ease-in-out;}
+
+input[type="text"]:focus {outline-color: transparent;outline: none;border-color: #aaa;transition: all 0.2s ease-in-out;}
+
+input[type="submit"] {line-height: 2.5em;padding: 5px 10px;margin: 10px 0;border-radius: 4px;border: 2px solid #aaa;text-transform: uppercase;font-weight: bold;color: #333;transition: all 0.2s ease-in-out;}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dashboard Styles */
+
+#dashboard {
+  background-image: url('stage.jpg');
+  height: calc(100% - 80px);
+  min-height: 400px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+#dashboard .text-wrapper {
+  width: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);}
+
+#dashboard .cta {
+  line-height:2em;
+  padding:5px 20px;
+  background-color:white;
+  color:#333;
+  border-radius:5px;
+  width: 200px;
+  margin: 0;
+  text-decoration: none;
+  box-shadow: 1px 1px 5px;
+}
+
+#dashboard .cta:hover {
+  transform: translateX(-2px) translateY(-2px);
+  box-shadow: 5px 5px 5px;
+}
+
 /* Footer Styles */
 
+footer {
+  background-color:#222;
+  padding:40px;
+  color:white;
+}
+
+footer p {
+  text-align:center;
+  line-height: 2em;
+}
+
+footer a {
+  display: inline-block;
+  line-height: 2em;
+  color:white;
+}
+
+footer a:hover {
+  color:#fff;
+  text-shadow: 0 0 2px rgba(255,255,255,0.5);
+}
 
 /* Fixes */
 .clear-fix {

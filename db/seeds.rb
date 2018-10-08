@@ -19,7 +19,7 @@ special_1c = comedian_1.specials.create(
 
 # Create Comedian 2
 comedian_2 = Comedian.create(
-  name:"Chris Rock", age:53,
+  name:"Chris Rock", age:50,
   city: "Andrews, South California", image_url:"https://answersafrica.com/wp-content/uploads/2018/05/chris-rock-AP-photo-640x360.jpg")
 special_2a = comedian_2.specials.create(
   name:"Chris Rock: Kill the Messenger", length:79,
@@ -141,3 +141,11 @@ special_8c = comedian_8.specials.create(
 comedian_9 = Comedian.create(
   name:"Ali Wong", age:36,
   city: "San Francisco California", image_url:"https://i1.wp.com/www.laurenelltalk.com/wp-content/uploads/2018/05/Ali_Wong.png?resize=700%2C312&ssl=1")
+special_9a = comedian_9.specials.create(
+  name:'Ali Wong: Hard Knock Wife', length:64,
+  image_url:"https://m.media-amazon.com/images/M/MV5BMWVkZDNjZTMtMTY0Yi00OGQ0LTliMDEtMWMxYzljYzZlYTY3XkEyXkFqcGdeQXVyMTEzNjA2NzM@._V1_UX182_CR0,0,182,268_AL_.jpg"
+)
+special_9b = comedian_9.specials.create(
+  name:'Ali Wong: Baby Cobra', length:60,
+  image_url:"https://m.media-amazon.com/images/M/MV5BOWZmODIxMDEtZGY1My00OGEyLWE3NTQtN2Y4MTFkMzdlMTc4XkEyXkFqcGdeQXVyNjcwNDI1MDk@._V1_UY268_CR4,0,182,268_AL_.jpg"
+)
