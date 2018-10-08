@@ -3,6 +3,7 @@ class LaughTracksApp < Sinatra::Base
 
   get '/' do
     @title = "Tim's Comedians"
+    @page_class = 'home-page'
     erb :"/dashboard"
   end
 
@@ -10,11 +11,13 @@ class LaughTracksApp < Sinatra::Base
     @comedians = Comedian.find_comedians(params)
     @specials = Special.by_comedians(@comedians)
     @title = "All Comedians | Tim's Comedians"
+    @page_class = 'comedians-page'
     erb :"/comedians/index"
   end
 
   get '/comedians/new' do
     @title = "Create New Comedian | Tim's Comedians"
+    @page_class = 'new-page'
     erb :"/comedians/new"
   end
 
@@ -26,6 +29,7 @@ class LaughTracksApp < Sinatra::Base
 
   get '/comedians/:id' do
     @comedians = Comedian.find(params[:id])
+    @page_class = 'comedian-page'
     erb :'/comedians/show'
   end
 
