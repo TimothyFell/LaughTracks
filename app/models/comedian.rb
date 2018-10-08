@@ -11,9 +11,9 @@ class Comedian < ActiveRecord::Base
   def self.find_comedians(params)
     if params[:age] != nil
       where(age: params[:age])
-    elsif params["sort"] == "name" || params["sort"] == "city" || params["sort"] == "age"
-      column = params["sort"].to_sym
-      order(column)
+    # elsif params["sort"] == "name" || params["sort"] == "city" || params["sort"] == "age"
+    #   column = params["sort"].to_sym
+    #   order(column)
     else
       all
     end

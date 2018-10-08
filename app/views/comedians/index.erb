@@ -2,8 +2,8 @@
   <h1>All Comedians</h1>
   <div class="statistics">
     <h2>Statistics</h2>
-    <p>Average Comedian Age: <%= @comedians.average_age %> years</p>
-    <p>Average Specials Run Time: <%= @specials.average_length %> min</p>
+    <p>Average Comedian Age: <%= @comedians.average_age.to_i %> years</p>
+    <p>Average Specials Run Time: <%= @specials.average_length.to_i %> min</p>
     <p>Total Specials: <%= @specials.total_specials(@comedians) %> specials</p>
     <p>Comedian Cities:</p>
     <ul class="cities">

@@ -175,6 +175,54 @@ RSpec.describe Comedian do
 
     end
 
+    describe 'When a user visits /comedians/:id' do
+      describe 'They should only see the information for that comedian_id' do
+
+        it 'have a name, age and city displayed' do
+          visit '/comedians/1'
+
+          within("#comedian-#{@comedian_1.id}") do
+            expect(page).to have_content(@comedian_1.name)
+            expect(page).to have_content(@comedian_1.age)
+            expect(page).to have_content(@comedian_1.city)
+          end
+        end
+
+        it "have a list of their specials' names" do
+          visit '/comedians/1'
+
+          within("#comedian-#{@comedian_1.id}") do
+            within('.specials') do
+              expect(page).to have_content(@special_1a.name)
+              expect(page).to have_content(@special_1b.name)
+              expect(page).to have_content(@special_1c.name)
+            end
+          end
+        end
+
+        it "have their specials' lengths and thumbnails displayed" do
+          visit '/comedians/1'
+
+          within("#comedian-#{@comedian_1.id}") do
+            expect(page).to have_content("Length: #{@special_1a.length} min")
+            expect(page).to have_content("Length: #{@special_1b.length} min")
+            expect(page).to have_content("Length: #{@special_1c.length} min")
+
+            expect(page).to have_css("img[src='#{@special_1a.image_url}']")
+            expect(page).to have_css("img[src='#{@special_1b.image_url}']")
+            expect(page).to have_css("img[src='#{@special_1c.image_url}']")
+          end
+        end
+
+        it 'Should not see other comedians' do
+          visit '/comedians/1'
+
+          expect(page).to have_no_content('Iliza')
+        end
+
+      end
+    end
+
   end
 
   describe 'When a user visits /comedians/new ' do
@@ -189,54 +237,6 @@ RSpec.describe Comedian do
         click_button('Submit')
 
         expect(page).to have_current_path('/comedians')
-      end
-
-    end
-  end
-
-  describe 'When a user visits /comedians/:id' do
-    describe 'They should only see the information for that comedian_id' do
-
-      it 'have a name, age and city displayed' do
-        visit '/comedians/1'
-
-        within("#comedian-#{@comedian_1.id}") do
-          expect(page).to have_content(@comedian_1.name)
-          expect(page).to have_content(@comedian_1.age)
-          expect(page).to have_content(@comedian_1.city)
-        end
-      end
-
-      it "have a list of their specials' names" do
-        visit '/comedians/1'
-
-        within("#comedian-#{@comedian_1.id}") do
-          within('.specials') do
-            expect(page).to have_content(@special_1a.name)
-            expect(page).to have_content(@special_1b.name)
-            expect(page).to have_content(@special_1c.name)
-          end
-        end
-      end
-
-      it "have their specials' lengths and thumbnails displayed" do
-        visit '/comedians/1'
-
-        within("#comedian-#{@comedian_1.id}") do
-          expect(page).to have_content("Length: #{@special_1a.length} min")
-          expect(page).to have_content("Length: #{@special_1b.length} min")
-          expect(page).to have_content("Length: #{@special_1c.length} min")
-
-          expect(page).to have_css("img[src='#{@special_1a.image_url}']")
-          expect(page).to have_css("img[src='#{@special_1b.image_url}']")
-          expect(page).to have_css("img[src='#{@special_1c.image_url}']")
-        end
-      end
-
-      it 'Should not see other comedians' do
-        visit '/comedians/1'
-
-        expect(page).to have_no_content('Iliza')
       end
 
     end
